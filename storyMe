@@ -1,0 +1,228 @@
+#include <stdio.h>
+//variables
+
+string_t introChoice, middleChoice1;
+int finalChoice;
+int c = 0;
+string_t name1;
+string_t name2;
+string_t cheat;
+int num1 = randint(1,6);
+int num2 = randint(1,6);
+
+
+// Functions
+
+void cheatsheet(string_t Cheatname, string_t Cheatname2, int Cheatnum){
+    printf("The wire/spell is: ", num2, "\n");
+    printf("Intro --> choose path 1 --> Avoid big green ogres --> reaches the end --> says the correct code within three guesses (", Cheatnum, ") --> Escapes\n  Intro --> through path 1 --> Avoid big green ogres --> Reaches the end --> says the wrong code three times --> You smell a foul stench from your body and the ogres smell  ", Cheatname, " and eats them.\n  Intro --> choose path 1 --> Confront the big green ogres --> Ogres attack ", Cheatname, " --> ", Cheatname, " dies.\n Intro --> choose path 1 --> ", Cheatname, " runs past the big green ogres --> ", Cheatname2, " tells ", Cheatname, " it's a one number code --> Says it wrong 3 times --> The ogres catch up to ", Cheatname, " --> ", Cheatname, " doesn't make it out alive.\n Intro --> chooses path 1 --> ", Cheatname, " runs past the big green ogres --> ", Cheatname2, " tells ", Cheatname, " it's a one number code --> Said the right code within three guesses. --> Escape\n");
+    printf("Intro --> Goes down path 2 --> Sees the portal --> water begins to pour out everywhere --> says three wrong guesses --> Shark comes out portal and ", Cheatname, " doesn't make it out alive.\n Intro --> Goes down path 2 --> Sees the portal --> Water begins to pour out everywhere --> Correct guess --> portal closes and ", Cheatname, "escapes\n  Intro --> Goes down path 2 -->  --> goes through the portal and sees a monstrous crab --> Doesn't make it out\n Intro --> Goes down path 2 --> Sees the portal flooding the forest --> climbs up a tree --> Gets tired, falls on a rock and doesn't make it out alive");
+    printf("Intro --> Goes down path 3 --> Jumps over pit --> Realizes theres ground below --> Realizes its quicksand and doesn't make it out alive.\n  Intro --> Goes down path 3 --> Attempts to jump across and barely makes it --> realizes they have to cast a spell --> Guesses wrong three times --> The spell failed and ", Cheatname, " sank and doesn't make it out alive.\nIntro --> goes down path 3 --> Attempts to jump across and barely makes it --> guesses spell correctly --> Portal opens and ", Cheatname, " makes it out alive.\nIntro --> enters door 3 --> attempts to climb to the other side using the ledge --> slips and falls into the pit --> ", Cheatname2, " tells ", Cheatname, "to cast a spell from 1-3 --> Three wrong guesses --> ", Cheatname, " sank.\nIntro --> goes down path 3 --> attempts to climb to the other side using the ledge along the pit --> slips and fall into the pit --> ", Cheatname2, " tells ", Cheatname, "to guess a spell from 1-3  --> correct guess --> Portal opens and ", Cheatname, "makes it out alive!\nIntro --> Goes down path 3 --> Jumps in the hole --> realizes theres ground below --> Sinks into the ground and doesn't make it out alive.\n");
+}
+void intro(){
+    printf(name1, " wakes up in the forest, they observe their surroundings looking to figure out where they are.\nThey see three paths, titled from 1-3.\n", name1, " became frantic trying to figure out where exactly they are when suddenly a voice inside his head spoke, Hello ", name1, ", I am ", name2, ", the worm inside your ear.\n\"Each path has its own unique challenges ahead, path 1 has ", num1," big green ogres, door 2 has a portal from the bottom of the \npacific that could flood the whole forest, door 3 has a pit with never ending quicksand.\n", name1, " looks at the paths and thinks about which one they should go down.\nWhat path do you think ", name1, " should choose?\n");
+    printf("Make your choice: 1, 2, or 3\n");
+    scanf("%s", &introChoice);
+    while(introChoice != "1" && introChoice != "2" && introChoice != "3"){
+        printf("That is not a choice. Please choose '1', '2', or '3'\n");
+        scanf("%s", &introChoice);
+    }
+}
+void middle1(){
+    printf(name1, " walks silently down path 1 when suddenly they hear a giant roar!\n", name1, " felt tense but pushed onward \nThe worm starts to speak and ", name1, " hears ", name2, " say, \"You’ve picked path 1!\nThe ogres haven’t seen you yet but they can smell you... SO HURRY!\n", name1, " looks ahead and sees a car just beyond the ogres but they have to find a way to get around them.\nThey have three choices they can try and get around the ogres, confront the ogres, or try and run past the ogres.\nWhich do you think they should do? (1 = avoid, 2 = confront, 3 = run past) PLEASE PICK A NUMBER\n");
+    printf("Make your choice! 1, 2, or 3.\n");
+    scanf("%s", &middleChoice1);
+    while(middleChoice1 != "1" && middleChoice1 != "2" && middleChoice1 != "3"){
+        printf("That is not a choice. Please choose '1', '2', or '3'\n");
+        scanf("%s", &middleChoice1);
+    }
+}
+void middle2(){
+    printf(name1, " runs down path 2 when suddenly they heard what seemed like water flowing. \n", name1, " began to see birds and deer running away from the end of the path\n", name1, " Started to become tense and flinched when ", name2, " said, \"This is path 2!  There isn’t much you can do but you have 10 minutes to get out until the portal becomes too big!\"", name1, " begins looking around for anything they can use then ", name1, " found a stick on the ground.\nLooks like there isn’t much to do but, ", name2, " spoke and told him that stick was a wand and told him he can close the portal with it. \n", name1, " though of two other things which were to climb a tree or go through the portal.\nWhat should they do? (Close it = 1, Go through it = 2, Climb a tree = 3)\n");
+    printf("Make your choice! 1, 2, or 3.\n");
+    scanf("%s", &middleChoice1);
+    while(middleChoice1 != "1" && middleChoice1 != "2" && middleChoice1 != "3"){
+        printf("That is not a choice. Please choose '1', '2', or '3'\n");
+        scanf("%s", &middleChoice1);
+    }
+    
+}
+void middle3(){
+    printf(name1, " walks carfully down path 3 and noticed that there were concrete walls surounding the path.\n", name1, " after 10 minutes of walking found a giant pit with what seemed to be ledges around the end!\n", name2, " began to spoke, \"I don’t know how deep this hole is but I wouldn’t stick around to find out!\"\nThey look around and find a book hanging on the wall on other side of the room and ", name2, " pointed out it was a spellbook used for portals.\nThey come up with three possible things to do, jump in the hole of quicksand and try to swim, jump to the other side, attempt to climb around;  What should they do?\n");
+    printf("Make your choice! 1, 2, or 3.\n");
+    scanf("%s", &middleChoice1);
+    while(middleChoice1 != "1" && middleChoice1 != "2" && middleChoice1 != "3"){
+        printf("That is not a choice. Please choose '1', '2', or '3'\n");
+        scanf("%s", &middleChoice1);
+    }
+}
+void ending(){
+    printf(name1, " sneaks around the ogres and makes it the car and gets inside.\n", name1," began to feel calm then noticed he didnt have the key then suddenly ", name2, " announces, \n\"Hello again", name1,", as you suspected you dont have the key but you can still try to howtire the car! You just have to connect the right wire to the black wire! \nBe careful though, three wrong guesses and the car alarm will go off, alerting the ogres!\"\n", name1, " begins frantically searching for any type of hint on which wire to cut but can’t seem to figure anything out.\n" ,name1, " will have to take a guess like ", name2, " said.\nWhich wire should ", name1, " try? PLEASE ENTER A NUMBER FROM 1 THROUGH 6\n");
+    scanf("%s", &finalChoice);
+    printf(finalChoice);
+    c = c+1;
+    while (finalChoice!=num2 && c!=3){
+        printf("That's wrong! Please try again\n");
+        scanf("%s", &finalChoice);
+        c = c+1;
+        printf("Guess count: ", c, "\n");
+    }
+    if (finalChoice == num2){
+        printf("The car starts and ", name1, " begins to drive down the path. They scream,  \"Thank god, I’m out of here!\" and drives down the path as the ogres begin running towards him.\n", name1, " made it out alive!\nThe ogres chase down ", name1, " and roared.\nThat’s the end of ", name1, "'s story.\n");
+    }
+    if (finalChoice != num2){
+        printf("Suddenly a car alarm booms throughout the forest and the ogres get startled and see ", name1, ".\n", name2, " suddenly said, \"Looks like that’s it for you!\"\n The ogres then sprinted towards the car and smashed open the window.\n ", name1, " screamed as the ogres pummel him. That is it for ", name1, "'s story.");
+    }
+}
+void ending2(){
+    printf(name1, " approaches the ogres preparing to fight them when suddenly the ogres lunge at ", name1, ".\n", name2, " mocked them saying, \"What type of idea was that!\nDid you really think you could fight ogres?\"\n The ogres start pummeling ", name1, " and tries to stand up and run from them\n", name2, "\n", name1, " begins to run but one of the ogres through a bola  at ", name1, " and they fell causing him to hit his head on a rock.  \nThats the end of ", name1, "’s story.\n");
+}
+void ending3(){
+    printf(name1, " runs past the ogres to make it to the car when suddenly they make it to the door but, ", name1," doesnt have a key!\n", name2, " begun to say, \"You need to hotwire the car connencting one of the three wires to the black wire and you only have 3 tries before the car disables itself and enables the alarm!\"\n", name1, " rushes and fumbles trying to figure out which wire he should choose first.\n", name1, " Is too smart to decide for himself. Which wire should they try?\nPLEASE ENTER A NUMBER FROM 1 THROUGH 6\n");
+    scanf("%i", &finalChoice);
+    c = c+1;
+    while (finalChoice != num2 && c != 3){
+        printf("That's wrong! Please try again\n");
+        scanf("%i", &finalChoice);
+        c = c+1;
+        printf("Guess count: ", c, "\n");
+    }
+    if (finalChoice == num2){
+        printf(name1, " starts the car and narrowly makes it out before the ogres were able open the door.\n", name1, "  realizes that he is safe now and begins to drive out the forest and looks around the car.\n The ogres roared and cussed at ", name1, " as he drove off. ", name1, " begins to laugh and makes a rude gesture at the ogres.\n Looks like ", name1, " made it out!\n");
+    }
+    if (finalChoice != num2){
+        printf("The car alarm went off and the ogres catch up to ",name1, " and ", name1, " was eaten alive shortly after that.\n The ogres began to talk and said \"Y'know, maybe we should take a shower.\n\" The ogres ignored him and continued eating. The ogre said \"Just a thought :(\"\n", name1,"’s story over.\n");
+    }
+}
+
+void ending4(){
+    printf(name1, " grabs the wand and asked ", name2," which spell is it to close the portal! \n", name2, " said three random spells and they had to guess.\" ", name1, " looked annoyed and said, \"You really suck you know that?\"\n", name1, "  starts rushing trying to figure out what spell to cast .\nWhich spell should they try?\nPLEASE ENTER A NUMBER FROM 1 THROUGH 6\n");
+    scanf("%i", &finalChoice);
+    c = c+1;
+    while (finalChoice != num2 && c != 3){
+        printf("That's wrong! Please try again\n");
+        scanf("%i", &finalChoice);
+        c = c+1;
+        printf("Guess count: ", c, "\n");
+    }
+    if (finalChoice != num2){
+        printf(name1, " realizes the wand isn’t responding and begins freaking out as water fills the forest.\n", name1, "  can’t do anything as the portal becomes very large.\nA giant crab begins to come through the portal and tramples everything in its path.\n The giant crab sees ", name1, " and shoots an energy beam at them.\n ", name1, " doesn’t make it out of the story alive.\n");
+    }
+    if (finalChoice == num2){
+        printf("The portal suddenly closed and ", name1, " looked relieved.\n The forest looks like a swamp now but atleast ", name1, " is alive.\n", name1, " begins walking through the mud and dead fish. ", name1, " thought to themself thinking that this had ruined the whole ecosystem.\nLooks like ", name1, " survived this time!\n");
+    }
+}
+void ending5(){
+    printf(name1, " begins walking through the portal. ", name2, " said \"YOU IDIOT, WHY ARE YOU WALKING THROUGH THE PORTAL???\"\n ", name1, " ignored ", name2, " and went through the other side of the portal. ", name1, " couldn't breathe because of the water and died. This is the end of ", name1, "'s story.");
+}
+
+void ending6(){
+    printf(name1, " begins trying to climb up a tree.\nAs they climb up ", name2, " said, \"What kind of idea is that?\"\n", name1, " ignores ", name2, " and keeps climbing to avoid the water.\n", name1, " starts getting tired and ends up falling into the water into a belly flop.\nThis is the end of ",name1, "’s story!\n");
+}
+void ending7(){
+    printf(name1, " swallows his fear and jumps; he landed in the quicksand and started sinking.\n", name2, " says, \"Looks like you're gonna be stuck for a while!\"\n", name1, " begins panicking and tries to swim to the other side but it only made them sink more.\nThis goes on for around ", num2, " minutes when suddenly ", name1, " starts to choke on sand.\n", name1, " can't get the sand out of there mouth and dies which concludes ", name1, "'s story.\n");
+}
+void ending8(){
+    printf(name1, " swallows their fear and jumps across!\nThey landed on the edge and climbed up and walked forth to take the book.\n", name2, " says, \"You have three attempts to guess the which spell it is to open the portal and after the third try the book will combust\"\n", name1, " looked annoyed and frusturated and was out of options.\nWhat numbers should they try?\nPLEASE ENTER A NUMBER FROM 1 THROUGH 6\n");
+    scanf("%i", &finalChoice);
+    c = c+1;
+    while (finalChoice != num2 && c != 3){
+        printf("That's wrong! Please try again\n");
+        scanf("%i", &finalChoice);
+        c = c+1;
+        printf("Guess count: ", c, "\n");
+    }
+    if (finalChoice != num2){
+        printf("The book combusts and ", name1, " wasn't able to make it.\n Since the book combusted the fire spread to ", name1, " which caused him to jump in the pit.\nThe pit helped extinguish the fire but ", name1, " started to sink.\n", name2, " said \"Rest in piece, ", name1,"\" and crawled out of their ear.\nThis concludes", name1, "’s story.\n");
+    }
+    if (finalChoice == num2){
+        printf("The portal opens and ", name1, " walks through it!\n The portal led them to their home bathroom.\n", name1, " then began to shake his head furiosly to get ", name2, " out.\n", name2, " pleaded for him to stay but ", name1, ", finnaly got them out.\nThis is the end for ", name1, "'s and ", name2, "'s story.\n");
+    }
+}
+
+void ending9(){
+    printf(name1, " begins climbing on the ledges on the wall to reach the book.\n", name2, " said, \"Good idea; You will be able to reach it in no time!\"\n", name1, " keeps climbing and makes it to the door.\n",name2, " says, \"You have three tries to guess the spell; If you fail, the book will combust!\"\nWhich spell should they try? GUESS FROM 1 THROUGH 6\n");
+    scanf("%i", &finalChoice);
+    c = c+1;
+    while (finalChoice != num2 && c != 3){
+        printf(" That's wrong! Please try again\n");
+        scanf("%i", &finalChoice);
+        c = c+1;
+        printf("Guess count: ", c);
+    }
+    if (finalChoice != num2){
+        printf(name1, "The book combusts and ", name1, " wasn't able to make it.\n Since the book combusted the fire spread to ", name1, " which caused him to jump in the pit.\nThe pit helped extinguish the fire but ", name1, " started to sink.\n", name2, " said \"Rest in piece, ", name1,"\" and crawled out of their ear.\nThis concludes", name1, "’s story.\n");
+    }
+    if (finalChoice == num2){
+        printf("The portal opens and ", name1, " walks through it!\n The portal led them to their home bathroom.\n", name1, " then began to shake his head furiosly to get ", name2, " out.\n", name2, " pleaded for him to stay but ", name1, ", finnaly got them out.\nThis is the end for ", name1, "'s and ", name2, "'s story.\n");
+    }
+}
+
+// Main Program
+int main(){  
+    printf("Who's the first character in our story?\n");
+    scanf("%s", &name1);
+    printf("What about our second character?\n");
+    scanf("%s", &name2);
+    printf("Would you like to see a cheat sheet for our story, yes or no?\n");
+    scanf("%s", &cheat);
+    while (cheat != "yes" && cheat != "no"){
+        printf("That's not a valid choice! Please pick yes or no!\n");
+        scanf("%s", &cheat);
+    }
+    if (cheat == "yes"){
+        printf(cheatsheet(name1, name2, num2));
+    }else{
+        printf("Okay!\n");
+    }
+    // intro
+    intro();
+    // middle 1
+    if (introChoice == "1"){
+        middle1();
+    }
+    // middle 2
+    if (introChoice == "2"){
+        middle2();
+    }
+    // middle 3
+    if (introChoice == "3"){
+        middle3();
+    }
+    // ending 1
+    if (middleChoice1 == "1" && introChoice == "1"){
+        ending();
+    }
+    // ending 2
+    if (middleChoice1 == "2" && introChoice == "1"){
+        ending2();
+    }
+    // ending 3
+    if (middleChoice1 == "3" && introChoice == "1"){
+        ending3();
+    }
+    // ending 4
+    if (middleChoice1 == "1" && introChoice == "2"){
+        ending4();
+    }
+    // ending 5
+    if (middleChoice1 == "2" && introChoice == "2"){
+        ending5();
+    }
+    // ending 6
+    if (middleChoice1 == "3" && introChoice == "2"){
+        ending6();
+    }
+    // ending 7
+    if (middleChoice1 == "1" && introChoice == "3"){
+        ending7();
+    }
+    // ending 8
+    if (middleChoice1 == "2" && introChoice == "3"){
+        ending8();
+    }
+    // ending 9
+    if (middleChoice1 == "3" && introChoice == "3"){
+        ending9();
+    }
+}
