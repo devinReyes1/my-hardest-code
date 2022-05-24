@@ -1,0 +1,38 @@
+import random
+name = str(input("What is your name? "))
+lastName = str(input("What is your last name? "))
+number = (random.randint(0,99))
+
+shoeSize = float(input("What is your shoe size? "))
+if (shoeSize > 12):
+    print ("\nWow " + name + ", you have a big shoe size!")
+else:
+    print ("\nWow " + name + ", you have a small shoe size!")
+
+age = int(input("How old are you " + name + "? "))
+if (age > 16):
+    print ("\nYour old enough to drive!")
+elif (age == 1):
+    print ("\n You are an infant! How are you talking?")
+else:
+    print ("\nYou can't drive yet.")
+    
+weight = float(input("How heavy are you? "))
+if (weight > 300):
+    print ("\nSorry, you can't drive a go kart.")
+else:
+    print ("\nThat's great, " + name + "!")
+    
+reflexes = str(input("Do you have good reflexes? "))
+if (reflexes == "yes"):
+    print ("\nThat's amazing, " + name + ".")
+elif(reflexes == "no"):
+    print ("\nSucks for you, " + name + ".")
+
+if (shoeSize < 12 and age >= 16 and weight < 300 and reflexes == "yes"):
+    print ("\nYou are permitted to drive a proffesional go kart, \n" + name + " " + lastName + ".")
+
+else:
+    print ("Sorry, you can't drive a proffesional go kart.")
+
+print ("Your number is, " + str(number) + ", have fun!")
